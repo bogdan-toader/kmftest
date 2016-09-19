@@ -24,6 +24,13 @@ public class MyFirstTest {
         graph.connect(new Callback<Boolean>() {
             public void on(Boolean result) {
 
+
+                Importer csvImporter = new Importer(graph);
+
+                csvImporter.importCsv();
+
+
+
                 Node root = graph.newNode(0,0);
                 root.setProperty("name", Type.STRING,"root");
                 root.set("temperature",15);
